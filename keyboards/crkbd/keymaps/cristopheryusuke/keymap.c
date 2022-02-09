@@ -20,14 +20,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdio.h>
 #include <enums.h>
 
+#define SFT_A SFT_T(KC_A)
+#define SFT_1 SFT_T(KC_1)
+#define CTL_S CTL_T(KC_S)
+#define CTL_2 CTL_T(KC_2)
+#define ALT_D ALT_T(KC_D)
+#define ALT_K ALT_T(KC_K)
+#define ALT_3 ALT_T(KC_3)
+#define ALT_8 ALT_T(KC_8)
+#define GUI_F GUI_T(KC_F)
+#define GUI_4 GUI_T(KC_4)
+#define RGUI_J RGUI_T(KC_J)
+#define RGUI_7 RGUI_T(KC_7)
+#define RCTL_L RCTL_T(KC_L)
+#define RCTL_9 RCTL_T(KC_9)
+#define RSFT_SCLN RSFT_T(KC_SCLN)
+#define RSFT_0 RSFT_T(KC_0)
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
+    KC_ESC,     KC_Q,   KC_W,      KC_E,   KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_TAB,   SFT_T(KC_A),    CTL_T(KC_S),    ALT_T(KC_D),    GUI_T(KC_F),    KC_G,   KC_H,   RGUI_T(KC_J),    ALT_T(KC_K),    CTL_T(KC_L), RSFT_T(KC_SCLN), KC_QUOT,
+    KC_TAB,   SFT_A,    CTL_S,    ALT_D,    GUI_F,    KC_G,                       KC_H,  RGUI_J,   ALT_K,   RCTL_L, RSFT_SCLN, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_GRAVE,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  TG(_GAME),
+    KC_GRAVE,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_N,   KC_M,   KC_COMM,  KC_DOT, KC_SLSH,  TG(_NUM),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                       MO(_NAV),   MO(_SYM),  KC_SPC,     KC_ENT,   MO(_SYM), MO(_NAV)
                                       //`--------------------------'  `--------------------------'
@@ -36,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_SYM] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-    KC_F11, KC_F1,   KC_F2,   KC_F3,    KC_F4,    KC_F5,                        KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10, KC_F12,
+    KC_F11, KC_F1,   KC_F2,   KC_F3,    KC_F4,    KC_F5,                        KC_F6,    KC_F7,    KC_F8,  KC_F9,  KC_F10, KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|       
-    _______, SFT_T(KC_1),CTL_T(KC_2),ALT_T(KC_3),GUI_T(KC_4),KC_5,              KC_6, RGUI_T(KC_7),ALT_T(KC_8),RCTL_T(KC_9),RSFT_T(KC_0), _______,
+    _______, SFT_1,     CTL_2,    ALT_3,   GUI_4,   KC_5,                        KC_6,    RGUI_7,   ALT_8,   RCTL_9,  RSFT_0, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
     _______, _______, KC_MINUS, KC_EQUAL, KC_LBRACKET, KC_RBRACKET,             KC_BSLASH, _______, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -73,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
     _______, _______, _______, _______, _______, _______,                      KC_KP_ASTERISK, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_MINUS, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-   _______, _______, _______, _______, _______, _______ ,                     KC_KP_SLASH, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_PLUS, _______,
+   _______, _______, _______, _______, _______, _______ ,                      KC_KP_SLASH, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_PLUS, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
     _______, _______, _______, _______, _______, _______,                      KC_KP_0, KC_KP_1, KC_KP_2, KC_KP_3, _______, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
