@@ -1,4 +1,8 @@
-RGBLIGHT_ENABLE = yes    # Enable WS2812 RGB underlight.
+CONSOLE_ENABLE = no         # Console for debug
+COMMAND_ENABLE = no         # Commands for debug and configuration
+MIDI_ENABLE = no            # MIDI controls
+AUDIO_ENABLE = no       
+RGBLIGHT_ENABLE = yes
 OLED_ENABLE     = yes
 OLED_DRIVER     = SSD1306
 LTO_ENABLE      = yes
