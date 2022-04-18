@@ -33,12 +33,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 200
 
+#define SSD1306OLED
+#define USE_SSD_I2C
 #define USE_SERIAL_PD2
+
 #define OLED_BRIGHTNESS 120
 #define OLED_TIMEOUT 60000
 
 #define SPLIT_WPM_ENABLE
 #define SPLIT_OLED_ENABLE
+
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
 
 #ifdef RGBLIGHT_ENABLE
     #define RGBLIGHT_EFFECT_BREATHING
